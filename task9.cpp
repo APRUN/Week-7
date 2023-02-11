@@ -1,35 +1,35 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-void function(int, float, float, int, float);
-int main()
+main()
 {
-    int age, toy;
-    float toyprice, total, machineprice, totaltoy;
-    cout << "Enter the age of Lily: ";
-    cin >> age;
-    cout << "Enter the unit price of each toy: ";
-    cin >> toyprice;
-    cout << "Enter the price of Washing machine: ";
-    cin >> machineprice;
-    function(age, total, toyprice, toy, totaltoy);
-}
-
-void function(int age, float total, float toyprice, int toy, float totaltoy)
-{
-   
-    total = (age/2);
-    for (int n = 2; n <= age; n++)
+    int rows1;
+    cout<<"Enter the number of rows: ";
+    cin>>rows1;
+ for(int rows=rows1; rows>0; rows-- )
+ {
+    for(int asterik=10; asterik>=rows;asterik--)
     {
-        if (n % 2 == 0)
-        {
-            total = (total + 10);
-        }
-        else
-        {
-            toy = toy + toyprice;
-        }
+        cout<<"*";
     }
     
-    total = total + toy;
-    cout << total;
+       cout<<endl;
+
+ }
+    for(int i=rows1; i>rows1; i++)
+    {
+        cout<<"  ";
+    }
+        for(int asterik=10; asterik>=rows1;asterik--)
+    {
+        cout<<"*";
+    }
+
+
+              
 }
+
+
+
+
+
+        

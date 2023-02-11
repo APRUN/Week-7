@@ -1,42 +1,45 @@
 #include <iostream>
 using namespace std;
-float calculate(float, int, int, int);
-int main()
+main()
 {
-    int travellingyear, totalmoney, year;
-    float inheritence, money;
-    travellingyear = 0;
-    inheritence = 0;
-    year = 0;
-    money = 0;
-    cout << "Enter the money of inheritence: ";
-    cin >> inheritence;
-    totalmoney = inheritence;
-    cout << "Enter the year Ivan don't want to work: ";
-    cin >> travellingyear;
-    totalmoney = calculate(money, year, travellingyear, totalmoney);
-    if (totalmoney > 0)
+    float totalweight,avgprice,cargonum,weight,singweight,minibus,train,truck,truckprice,minibusprice,trainprice;
+    weight=0;
+    cout<<"Enter the number of cargo: ";
+    cin>>cargonum;
+    cout<<"Enter the total weight of cargo: ";
+    cin>>totalweight;
+    totalweight+=weight;
+    for(int i=0; i<cargonum; i++)
     {
-        cout << "Yes he has enough money to live till " << travellingyear << " and left with " << totalmoney << " Dollars";
+        cout<<"Enter the weight: ";
+        cin>>singweight;
+          if(singweight<=3)
+          {
+            minibus+=singweight;
+          }
+          else if(singweight>3 && singweight<=11)
+          {
+              truck+=singweight;
+          }
+          else
+          {
+            train+=singweight;
+          }
     }
-    else
-    {
-        cout << "No!he don't has enough money to live till " << travellingyear << " and left with " << totalmoney << " Dollars.";
-    }
-}
-float calculate(float money, int year, int travellingyear, int totalmoney)
-{
 
-    for (int year = 1800; year <= travellingyear; year++)
-    {
-        if (year % 2 == 0)
-        {
-            totalmoney = totalmoney - 12000;
-        }
-        if (year % 2 != 0)
-        {
-            totalmoney -= 12000 + 50 * (year + 18 - 1800);
-        }
-    }
-    return totalmoney;
+        
+
+
+       minibusprice=minibus*200;
+       truckprice=truck*175;
+       trainprice=train*120;
+       avgprice=(minibusprice+truckprice+trainprice)/totalweight;
+       cout<<"The Average price is: "<<avgprice<<endl;
+
+       minibus=(minibus/totalweight)*100;
+      truck=(truck/totalweight)*100;
+      train=(train/totalweight)*100;
+      cout<<"For minibus: "<<minibus<<"%"<<endl;
+       cout<<"For truck: "<<truck<<"%"<<endl;
+        cout<<"For train: "<<train<<"%"<<endl;
 }

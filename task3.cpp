@@ -1,24 +1,36 @@
 #include <iostream>
 using namespace std;
-int function(int,int);
+void function1(int);
 main()
+
 {
-    int number,count;
-    cout<<"Enter the number: ";
-    cin>>number;
-    count=function(count,number);
-    cout<<count;
-}
-int function(int count, int number)
-{
-    count=0;
-    while(number>0)
+    int rows;
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+
+    for (int n = 1; n < rows; n++)
     {
-   
-    number=number/10;
-     count=count+1;
+        for (int j = 1; j < rows - n; j++)
+        {
+            cout << " ";
+        }
+        for (int m = 1; m <= n; m++)
+        {
+            cout << "*";
+        }
+        cout << endl;
     }
-    return count;
+
+    for (int n = 1; n < rows; n++)
+    {
+        for (int m = 1; m <= n; m++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j < rows - n; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }
-
-

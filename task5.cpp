@@ -1,23 +1,15 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int function(int , int, int);
 main()
 {
-   int fnumber,num2,num3,count;
-   cout<<"Enter the number: ";
-   cin>>fnumber;
-   count=function(fnumber,num2,count);
-   cout<<count;
-
-}
-int function(int fnumber, int num2,int count)
-{
-       count=0;
-   while(fnumber>0)
-   {
-     num2=fnumber%10;
-     fnumber=fnumber/10;
-    count=count+num2;
-   }
-    cout<<count;
+    int dots,sum;
+    sum=0;
+    cout<<"Enter the number of Dots: ";
+    cin>>dots;
+    for(int i=1; i<=dots; i++)
+    {
+       sum=sum+i;
+      
+    }
+    cout<<sum;
 }
